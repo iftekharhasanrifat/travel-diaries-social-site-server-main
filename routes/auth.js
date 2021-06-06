@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 const User = mongoose.model('User')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
-const {JWT_SECRET} = `${process.env.JWT}`
+const JWT_SECRET = `${process.env.JWT}`
 const protected = require('../access/access')
 
 router.get('/authorized',protected, (req, res) => {
